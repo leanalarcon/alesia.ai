@@ -1,0 +1,9 @@
+
+Options +SymLinksIfOwnerMatch 
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^alesia.ai
+RewriteRule (.*) https://www.alesia.ai/$1 [R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
+
